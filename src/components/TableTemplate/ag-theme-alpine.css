@@ -1,0 +1,98 @@
+.ag-header-cell-resize{
+    border-left: 1px solid #EEEFF1;
+}
+.ag-ltr,.ag-pivot-off {
+    border: 1px solid #EEEFF1 !important;
+}
+.ag-header{
+    height: 44px !important;
+}
+.ag-header-row-column{
+    height: 100% !important;
+}
+.ag-icon:before{
+    content: url("../../assets/img/drag.svg") !important;
+}
+.ag-row{
+    border-bottom: none !important;
+    height: 45px !important;
+}
+.ag-row-drag{
+    margin-right: 2px !important;
+}
+
+.table-select{
+    position: relative;
+    height: 35px;
+    margin: 5px 10px;
+    border: 1px solid #C0C0C0;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.table-select span{
+    display: block;
+    margin: 6px 15px;
+}
+
+.table-select:before{
+    display: none;
+
+}
+
+
+.table-select__options{
+    margin-top: 5px;
+    position: absolute;
+    top: 100%;
+    background: white;
+    left:0;
+    box-shadow: 0px 0px 3px, inset 0px 1px 2px rgba(255,255,255,0.5);
+    width: 100%;
+    border-radius: 5px;
+
+
+}
+
+.table-select__options p{
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+
+    padding: 6px; /* Поля вокруг текста */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.ag-cell-focus{
+    overflow: visible !important;
+    border: none !important;
+}
+.ag-row-focus{
+    z-index: 1;
+}
+
+.table-select__result{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.table-select__result__arrow:before{
+    content: '▶';
+    color: #C0C0C0;
+    font-size: 8px;
+    background: #F6F5F3;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96%;
+    margin-top: 0.5px;
+    border-radius: 0 5px 5px 0;
+}
+
+.ag-cell{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}

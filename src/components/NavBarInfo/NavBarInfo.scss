@@ -1,0 +1,19 @@
+.nav-bar-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  ul{
+
+
+  display: flex;
+  gap: 16px;
+  margin: 20px 0;
+  li{
+    list-style-type: none;
+    cursor: pointer;
+    color: #1253A2;
+    font-size: 16px;
+  }
+  }
+}
