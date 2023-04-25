@@ -55,11 +55,18 @@
 
 }
 
-.table-select__options p{
+.table-select__options p
+
+{
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    padding: 6px; /* Поля вокруг текста */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+}
+.table-select span{
     white-space: nowrap; /* Запрещаем перенос строк */
     overflow: hidden; /* Обрезаем все, что не помещается в область */
 
-    padding: 6px; /* Поля вокруг текста */
     text-overflow: ellipsis; /* Добавляем многоточие */
 }
 .ag-cell-focus{
@@ -95,4 +102,21 @@
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
+}
+
+.table-number-input {
+    font-size: 16px;
+
+    padding: 10px 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    outline: none;
+    max-width: 98%;
+}
+
+.table-number-input::-webkit-outer-spin-button,
+.table-number-input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }

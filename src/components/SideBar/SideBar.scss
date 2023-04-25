@@ -15,17 +15,43 @@
   }
   &__list{
     width: 100%;
-
+    &__info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 7px 25px;
+      border-left: 2px solid rgba(0,0,0,0);
+    }
+    &__info.selected{
+      border-left:2px solid #FD8301;
+    }
     li{
       list-style-type: none;
-      padding: 7px 25px;
+
       cursor: pointer;
+      display: flex;
+      flex-direction: column;
 
       &:hover {
         background-color: #1F2123;
       }
 
+      .sub-list{
+        ul {
+          margin: 6px 0;
+          li{
+            list-style-type: none;
+            padding: 7px 25px;
+            border-left: 2px solid rgba(0,0,0,0);
+          }
+          li.selected{
+            border-left:2px solid #FD8301;
+          }
+        }
+      }
+
     }
+
   }
 
   &__profile-wrapper{

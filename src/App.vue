@@ -4,12 +4,26 @@
 </template>
 
 <script>
+  import {mapState} from "vuex";
+
   export default {
     methods:{
       setRecords(){
-        this.$store.commit('setNamesOfOneListInRecords')
+        if(localStorage.getItem('compas')){
+          this.$store.commit('getLocalStorageData', JSON.parse(localStorage.getItem('compas')))
+        }
+        else{
+          this.$store.commit('setNamesOfOneListInRecords')
+          localStorage.setItem('compas',
+                  JSON.stringify({defaultRecords:this.defaultRecords,columnDefsStore:this.columnDefsStore}))
+
+        }
       }
     },
+    computed: mapState({
+      defaultRecords: state => state.defaultRecords,
+      columnDefsStore: state => state.columnDefsStore
+    }),
     mounted() {
       this.setRecords()
     }

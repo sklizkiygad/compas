@@ -1,6 +1,4 @@
-export const nameOfOneCellRenderer = {
-
-
+export const nameCellRenderer = {
     template: `
         <div class="table-select" @click="setIsOpenOptions">
             <div class="table-select__result">
@@ -10,7 +8,7 @@ export const nameOfOneCellRenderer = {
             </div>
       
         <div class="table-select__options" v-if="isOpenOptions">
-         <p v-for="nameOfOne in this.params.value" @click="setSelectedOption(nameOfOne.name)">{{nameOfOne.name}}</p>
+         <p v-for="nameOfOne in this.params.value"  @click="setSelectedOption(nameOfOne.name)">{{nameOfOne.name}}</p>
         </div>
           
            
@@ -26,11 +24,10 @@ export const nameOfOneCellRenderer = {
             this.isOpenOptions=!this.isOpenOptions
         },
         setSelectedOption(e){
-             this.selectedOption=e
+            this.selectedOption=e
         }
-        
+
 
     }
 
 }
-

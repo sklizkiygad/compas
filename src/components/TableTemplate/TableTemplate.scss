@@ -8,10 +8,64 @@
     justify-content: flex-end;
     gap: 20px;
     padding: 7px 15px;
+    position: relative;
     p{
       font-size: 12px;
       color: #A6B7D4;
 
+    }
+    &__options{
+      position: absolute;
+      right: 10px;
+      z-index: 2;
+      top: 100%;
+      background: white;
+      border-radius: 5px;
+
+      box-shadow: 0px 0px 3px, inset 0px 1px 2px rgba(255, 255, 255, 0.5);
+      &__item{
+        gap: 10px;
+        font-size: 14px;
+        color:black;
+        padding: 5px 10px;
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &:hover{
+          background: #eef3f8;
+
+        }
+
+        &:hover &__list{
+          display: flex;
+        }
+
+        &:first-child{
+          border-radius: 5px 5px 0 0;
+        }
+        &:last-child{
+          border-radius:  0 0 5px 5px;
+        }
+
+        &__list{
+          display: none;
+          position: absolute;
+          top: 100%;
+          z-index: 2;
+          width: 100%;
+          right: 0;
+          //display: flex;
+          flex-direction: column;
+          gap: 5px;
+          background: white;
+          border-radius: 5px;
+          box-shadow: 0px 0px 3px, inset 0px 1px 2px rgba(255, 255, 255, 0.5);
+          padding: 5px;
+        }
+
+      }
     }
   }
 }
@@ -39,5 +93,22 @@
   width: 100%;
   .table__header{
     display: flex;
+  }
+}
+
+.action-drots{
+  position: relative;
+  cursor: pointer;
+  &__actions{
+    position: fixed;
+    top: 1px;
+    margin-left: 8px;
+    z-index: 1;
+    background: white;
+    padding: 5px;
+    box-shadow: 0px 0px 3px, inset 0px 1px 2px rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-size: 10px;
+
   }
 }
